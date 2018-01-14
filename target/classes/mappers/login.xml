@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fsimpolor.app.member.mapper.LoginMapper">
+
+   	<select id="selectMemberLogin" parameterType="com.simpolor.app.member.vo.MemberVO" resultType="com.simpolor.app.member.vo.MemberVO">
+		SELECT member_id, member_name, email
+		  FROM member
+		 WHERE member_id = #{member_id}
+		   AND member_pw = #{member_pw} 
+    </select>
+    
+</mapper>
